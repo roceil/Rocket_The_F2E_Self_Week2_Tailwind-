@@ -1,0 +1,87 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<main class="">
+  <!-- timeline-->
+  <section class="w-[calc(100vw-130px)] mb-[80px]">
+    <ul
+      class="flex justify-center py-10 space-x-[205px] relative before:h-[6px] before:w-[520px] before:absolute before:top-1/2 before:translate-y-[-260%] before:left-1/2 before:translate-x-[-50%] before:-z-10 before:bg-primary"
+    >
+      <!-- 01 -->
+      <li class="flex flex-col items-center">
+        <div
+          class="w-[60px] h-[60px] bg-primary rounded-full flex justify-center items-center text-white text-[32px] leading-none font-arial mb-[7px]"
+        >
+          1
+        </div>
+        <p class="text-primary font-bold">Add File</p>
+      </li>
+
+      <!-- 02 -->
+      <li class="flex flex-col items-center z-10">
+        <div
+          id="step2"
+          class="bg-white w-[60px] h-[60px] border-[5px] border-primary rounded-full flex justify-center items-center text-primary text-[32px] leading-none font-arial mb-[7px]"
+        >
+          2
+        </div>
+        <p class="text-primary font-bold opacity-40">Add Signature</p>
+      </li>
+
+      <!-- 03 -->
+      <li class="flex flex-col items-center">
+        <div
+          class="w-[60px] h-[60px] border-[5px] border-primary rounded-full flex justify-center items-center text-primary text-[32px] leading-none font-arial mb-[7px]"
+        >
+          3
+        </div>
+        <p class="text-primary font-bold opacity-40">Done</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 中間BTN -->
+  <section >
+    <ul class="flex justify-end container">
+      <li class="btn btn-sec rounded-[10px] mr-1 text-white"><input type="button" value="Download" /></li>
+
+      <li class="flex justify-center border border-black py-[23px] px-[13px] rounded-[10px]">
+        <div class="la-ball-beat">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- upload - canvas  -->
+  <section>
+    <div class="container w-full">
+      <div class="w-full flex justify-center items-center">
+        <form class="mt-[60px] relative">
+          <label
+            class="block absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] input-file"
+          >
+            <input type="file" class="hidden input-file-btn" />
+            <img
+              class="cursor-pointer"
+              src="./assets/images/add pdf file.svg"
+              alt=""
+            />
+          </label>
+          <div
+            class="w-[1430px] h-[600px]  overflow-scroll rounded-[20px] border-primary border-[5px] border-dashed draw-container text-center flex justify-center"
+          >
+            <canvas id="canvas" class=""></canvas>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,26 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%- title %></title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%- title %></title>
-  <link rel="stylesheet" href="./assets/style/all.css">
-</head>
+  <body>
+    <header class="bg-primary">
+      <div class="px-6 py-2">
+        <a href="#"><img src="./assets/images/header-logo.png" alt="logo" /></a>
+      </div>
+    </header>
 
-<body>
-  <header class="header">
-    這是 header
-  </header>
+    <div class="flex">
+      <!-- 左邊導覽列 -->
+      <nav class="w-[130px] h-[calc(100vh-72px)]">
+        <ul>
+          <!-- sign -->
+          <li>
+            <a
+              class="flex pl-6 py-5 space-x-[30px] group hover:bg-gray03 hover:duration-300 hover:ease-in-out"
+              href="#"
+            >
+              <!-- icon -->
+              <div
+                class="text-gray02 flex flex-col justify-center items-center"
+              >
+                <img
+                  class="mb-[10px]"
+                  src="./assets/images/start-sign-icon.svg"
+                  alt="Sign"
+                />
+                <p>Sign</p>
+              </div>
 
-  <%- contents %>
+              <!-- arrow -->
+              <img src="./assets/images/start-arrow-r.svg" alt="arrow" />
+            </a>
+          </li>
+          <!-- text -->
+          <li>
+            <a
+              class="flex pl-6 py-5 space-x-[30px] group hover:bg-gray03 hover:duration-300 hover:ease-in-out"
+              href="#"
+            >
+              <!-- icon -->
+              <div
+                class="text-gray02 flex flex-col justify-center items-center"
+              >
+                <img
+                  class="mb-[10px]"
+                  src="./assets/images/start-text-icon.svg"
+                  alt="text"
+                />
+                <p>text</p>
+              </div>
 
-  <footer class="footer">
-    footer
-  </footer>
-  <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/js/all.js"></script>
-</body>
+              <!-- arrow -->
+              <img src="./assets/images/start-arrow-r.svg" alt="arrow" />
+            </a>
+          </li>
+          <!-- file -->
+          <li>
+            <a
+              class="flex pl-6 py-5 space-x-[30px] group hover:bg-gray03 hover:duration-300 hover:ease-in-out"
+              href="#"
+            >
+              <!-- icon -->
+              <div
+                class="text-gray02 flex flex-col justify-center items-center"
+              >
+                <img
+                  class="mb-[10px]"
+                  src="./assets/images/start-file-icon.svg"
+                  alt="file"
+                />
+                <p>file</p>
+              </div>
 
+              <!-- arrow -->
+              <img src="./assets/images/start-arrow-r.svg" alt="arrow" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <%- contents %>
+    </div>
+
+
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+
+    <footer class=" w-screen h-[50px] bg-white block">
+      <div class=""></div>
+    </footer>
+
+  </body>
 </html>

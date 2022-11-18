@@ -1,8 +1,49 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%- title %></title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+  <body>
+    <main>
+      <!-- landing -->
+      <section>
+        <div class="bg-banner-bg w-full h-screen -z-10">
+          <!-- 上方logo -->
+          <a class="z-10 block pl-[25.5px]" href="#">
+            <img src="./assets/images/header-logo-lg.png" alt="logo" />
+          </a>
+          <!-- 上方logo -->
+          <!-- 中間內容 -->
+          <div class="flex justify-between  lg:mt-10 lg:px-8 xl:pl-[157.5px]  xl:pr-[101px] lg:space-x-10">
+            <!-- 左圖 -->
+            <img class="lg:w-[500px] xl:w-auto"  src="./assets/images/banner-main.png" alt="" />
 
-<p class="text-3xl font-bold underline">This is a demo.</p>
+            <!-- 右文字 -->
+            <div class="flex flex-col justify-center text-white  space-y-10">
+              <h1 class=" text-[48px] leading-[48px] font-bold">
+                Dot.Sign,<br> Digital signature generator for <br> professionalists.
+              </h1>
+              <p class="text-2xl leading-7">Upload · Sign · Go <br>
+                Keep it classy, keep it easy.</p>
+                <div class="btn btn-sec">
+                  <a class="w-full block" href="./start.html">Start >></a>
+                </div>
+            </div>
+          </div>
+          <!-- 中間內容 -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
